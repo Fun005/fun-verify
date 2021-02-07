@@ -15,15 +15,15 @@ import script from 'scriptjs';
   </div>
 </template>
 <script>
-import CharVerify from '../components/CharVerify'
-import OperationVerify from '../components/OperationVerify'
-import SlideVerify from '../components/SlideVerify'
-import img0 from '../assets/slide-varify/img.jpg';
-import img1 from '../assets/slide-varify/img1.jpg';
-import img2 from '../assets/slide-varify/img2.jpg';
-import img3 from '../assets/slide-varify/img3.jpg';
-import img4 from '../assets/slide-varify/img4.jpg';
-import img5 from '../assets/slide-varify/img5.jpg';
+import CharVerify from '@/components/VerifyOne/CharVerify'
+import OperationVerify from '@/components/VerifyOne/OperationVerify'
+import SlideVerify from '@/components/VerifyOne/SlideVerify'
+import img0 from '@/assets/slide-varify/img.jpg';
+import img1 from '@/assets/slide-varify/img1.jpg';
+import img2 from '@/assets/slide-varify/img2.jpg';
+import img3 from '@/assets/slide-varify/img3.jpg';
+import img4 from '@/assets/slide-varify/img4.jpg';
+import img5 from '@/assets/slide-varify/img5.jpg';
 export default {
   data () {
     return {

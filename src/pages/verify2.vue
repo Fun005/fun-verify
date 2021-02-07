@@ -3,45 +3,45 @@
     <div class="login-box">
       <button @click="handleClick(1)">最简单用法</button>
       <div class="puzzle-box">
-        <PuzzleVerification v-model="isVerificationShow1" :onSuccess="handleSuccess" />
+        <VerifyTwo v-model="isVerificationShow1" :onSuccess="handleSuccess" />
       </div>
     </div>
 
     <div class="login-box">
       <button @click="handleClick(2)">拼图形滑块</button>
       <div class="puzzle-box">
-        <PuzzleVerification v-model="isVerificationShow2" :puzzleImgList="puzzleImgList" blockType="puzzle" :onSuccess="handleSuccess" />
+        <VerifyTwo v-model="isVerificationShow2" :puzzleImgList="puzzleImgList" blockType="puzzle" :onSuccess="handleSuccess" />
       </div>
     </div>
 
     <div class="login-box">
       <button @click="handleClick(3)">控制大小</button>
       <div class="puzzle-box">
-        <PuzzleVerification v-model="isVerificationShow3" width="300" height="200" blockSize="80" blockRadius="5" :onSuccess="handleSuccess" />
+        <VerifyTwo v-model="isVerificationShow3" width="300" height="200" blockSize="80" blockRadius="5" :onSuccess="handleSuccess" />
       </div>
     </div>
 
     <div class="login-box">
       <button @click="handleClick(4)">控制误差</button>
       <div class="puzzle-box">
-        <PuzzleVerification v-model="isVerificationShow4" :puzzleImgList="puzzleImgList" deviation="20" blockType="puzzle" :onSuccess="handleSuccess" />
+        <VerifyTwo v-model="isVerificationShow4" :puzzleImgList="puzzleImgList" deviation="20" blockType="puzzle" :onSuccess="handleSuccess" />
       </div>
     </div>
 
     <div class="login-box">
       <button @click="handleClick(5)">控制滑块出现位置范围</button>
       <div class="puzzle-box">
-        <PuzzleVerification v-model="isVerificationShow5" wraperPadding="50" :onSuccess="handleSuccess" />
+        <VerifyTwo v-model="isVerificationShow5" wraperPadding="50" :onSuccess="handleSuccess" />
       </div>
     </div>
   </div>
 </template>
 <script>
-import PuzzleVerification from '@/components/PuzzleVerify'
+import VerifyTwo from '@/components/VerifyTwo'
 
 export default {
   components: {
-    PuzzleVerification
+    VerifyTwo
   },
   data () {
     return {

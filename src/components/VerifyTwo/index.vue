@@ -435,64 +435,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 @import '../../styles/common.less';
 /* @import '@/styles/common.less'; */
-.slider-btn {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  left: 0;
-  top: -7px;
-  z-index: 12;
-  cursor: pointer;
-  background-image: url(~resource/puzzle/sprite.3.2.0.png);
-  background-position: 0 -84px;
-  transition: inherit;
-}
-
-.ver-tips {
-  position: absolute;
-  left: 0;
-  bottom: -22px;
-  background: rgba(255, 255, 255, 0.9);
-  height: 22px;
-  line-height: 22px;
-  font-size: 12px;
-  width: 100%;
-  margin: 0;
-  text-align: left;
-  padding: 0 8px;
-  transition: all 0.4s;
-}
-
-.slider-tips {
-  bottom: 0;
-}
-
-.ver-tips i {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  vertical-align: top;
-  background-image: url(~resource/puzzle/sprite.3.2.0.png);
-  background-position: -4px -1229px;
-}
-
-.ver-tips span {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 22px;
-  color: #455;
-}
-
-.active-tips {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
 
 .puzzle-container {
   position: relative;
@@ -501,97 +446,152 @@ export default {
   border: 1px solid #ddd;
   background: #ffffff;
   border-radius: 16px;
-}
+  .slider-btn {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 0;
+    top: -7px;
+    z-index: 12;
+    cursor: pointer;
+    background-image: url(~resource/puzzle/sprite.3.2.0.png);
+    background-position: 0 -84px;
+    transition: inherit;
+  }
 
-.puzzle-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 0;
-}
+  .ver-tips {
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+    background: rgba(255, 255, 255, 0.9);
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    padding: 0 8px;
+    transition: all 0.4s;
+  }
 
-.puzzle-header-left {
-  color: #333;
-}
+  .slider-tips {
+    bottom: 0;
+  }
 
-.re-btn,
-.close-btn {
-  font-size: 16px;
-  cursor: pointer;
-  color: #666;
-}
+  .ver-tips i {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    background-image: url(~resource/puzzle/sprite.3.2.0.png);
+    background-position: -4px -1229px;
+  }
 
-.re-btn:hover {
-  color: #67c23a;
-}
+  .ver-tips span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 22px;
+    color: #455;
+  }
 
-.close-btn:hover {
-  color: #f56c6c;
-}
+  .active-tips {
+    display: block;
+  }
 
-.close-btn {
-  margin-left: 5px;
-}
+  .hidden {
+    display: none;
+  }
 
-.slider-container {
-  position: relative;
-  margin: 10px auto 0;
-  min-height: 15px;
-}
+  .puzzle-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
 
-.slider-bar {
-  height: 10px;
-  border: 1px solid #c3c3c3;
-  border-radius: 5px;
-  background: #e4e4e4;
-  box-shadow: 0 1px 1px rgba(12, 10, 10, 0.2) inset;
-  position: absolute;
-  width: 100%;
-  top: 7px;
-}
+  .puzzle-header-left {
+    color: #333;
+  }
 
-#puzzle-box {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 22;
-}
+  .re-btn,
+  .close-btn {
+    font-size: 16px;
+    cursor: pointer;
+    color: #666;
+  }
 
-#puzzle-shadow {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 22;
-}
+  .re-btn:hover {
+    color: #67c23a;
+  }
 
-#puzzle-lost {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 33;
-}
+  .close-btn:hover {
+    color: #f56c6c;
+  }
 
-.puzzle-lost-box {
-  position: absolute;
-  width: 260px;
-  height: 116px;
-  left: 0;
-  top: 0;
-  z-index: 111;
-}
+  .close-btn {
+    margin-left: 5px;
+  }
 
-.iconfont {
-  font-family: 'puzzle-iconfont' !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  .slider-container {
+    position: relative;
+    margin: 10px auto 0;
+    min-height: 15px;
+  }
 
-.icon-guanbi:before {
-  content: '\f01f1';
-}
+  .slider-bar {
+    height: 10px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    background: #e4e4e4;
+    box-shadow: 0 1px 1px rgba(12, 10, 10, 0.2) inset;
+    position: absolute;
+    width: 100%;
+    top: 7px;
+  }
 
-.icon-shuaxin:before {
-  content: '\e609';
+  #puzzle-box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 22;
+  }
+
+  #puzzle-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 22;
+  }
+
+  #puzzle-lost {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 33;
+  }
+
+  .puzzle-lost-box {
+    position: absolute;
+    width: 260px;
+    height: 116px;
+    left: 0;
+    top: 0;
+    z-index: 111;
+  }
+
+  .iconfont {
+    font-family: 'puzzle-iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-guanbi:before {
+    content: '\f01f1';
+  }
+
+  .icon-shuaxin:before {
+    content: '\e609';
+  }
 }
 </style>

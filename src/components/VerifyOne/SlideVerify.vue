@@ -364,7 +364,7 @@ export default {
   width: 34px;
   height: 34px;
   cursor: pointer;
-  background: url('../assets/slide-varify/icon_light.png') 0 -437px;
+  background: url('../../assets/slide-varify/icon_light.png') 0 -437px;
   background-size: 34px 471px;
 }
 
@@ -415,7 +415,7 @@ export default {
   left: 13px;
   width: 14px;
   height: 12px;
-  background: url('../assets/slide-varify/icon_light.png') 0 -26px;
+  background: url('../../assets/slide-varify/icon_light.png') 0 -26px;
   background-size: 34px 471px;
 }
 .container-active .slide-verify-slider-mask-item {

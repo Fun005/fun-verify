@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <div class="box">
-      <router-link to="verify" class="button">verify</router-link>
+      <router-link to="verify1" class="button">verify1</router-link>
+      <router-link to="verify2" class="button">verify2</router-link>
+      <router-link to="verify3" class="button">verify3</router-link>
       <router-link to="login" class="button">login</router-link>
-      <router-link to="puzzle" class="button">puzzle</router-link>
     </div>
   </div>
 </template>

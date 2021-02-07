@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { getAllLetter, randomNum, randomColor } from '../utils/util'
+import { getAllLetter, randomNum, randomColor } from '@/utils/util'
 export default {
   props: {
     options: {

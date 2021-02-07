@@ -1,2 +1,4 @@
-# fe-verify
-前端图形验证demo，vuecli3
+# fun-verify
+前端图形验证
+demo
+vuecli3

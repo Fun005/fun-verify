@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     handleSuccess () {
-      console.log('验证成功')
+      console.log('%c 🍰 验证成功', 'font-size:18px;background-color: #33A5FF;color:#fff;');
     },
     handleClick (n) {
       switch (n) {

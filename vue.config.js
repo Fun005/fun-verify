@@ -76,12 +76,12 @@ module.exports = {
   //   })
   // },
 
-  devServer: {
-    allowedHosts: [
-      '.mgtv.com',
-    ],
-    host: 'test.mgtv.com',
-  },
+  // devServer: {
+  //   allowedHosts: [
+  //     '.mgtv.com',
+  //   ],
+  //   host: 'test.mgtv.com',
+  // },
   css: {
     loaderOptions: {
       postcss: {

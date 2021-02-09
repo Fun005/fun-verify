@@ -5,6 +5,7 @@ import Verify1 from '../pages/verify1.vue'
 import Verify2 from '../pages/verify2.vue'
 import Verify3 from '../pages/verify3.vue'
 import Login from '../pages/login.vue'
+import Demo from '../pages/demo.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,10 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
+  }, {
+    path: '/demo',
+    name: 'demo',
+    component: Demo
   }
 ]
 

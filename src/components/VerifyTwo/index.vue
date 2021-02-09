@@ -355,10 +355,15 @@ export default {
       this.addMouseMoveListener();
     },
 
-    /* 滑块移动 */
+    /**
+     *  滑块移动
+     *  TODO: e.pageX = 0 时会执行后面的逻辑，此处需要优化
+     *  TODO: 节流优化
+    */
     moving (e) {
       e = e || window.event;
-      let moveX = e.pageX || e.targetTouches[0]?.pageX;
+      console.log('eeeeee', e);
+      let moveX = e?.pageX || e.targetTouches[0]?.pageX;
       let d = moveX - this.moveStart;
       let w = this.dataWidth;
       let PL_Size = this.puzzleSize;
@@ -422,6 +427,8 @@ export default {
         this.$refs.sliderBtn.style.backgroundPosition = "0 -84px";
       }
       this.moveStart = "";
+
+      this.removeListener()
     },
 
     /* 全局绑定滑块移动与滑动结束，移动过程中鼠标可在页面任何位置 */
@@ -430,6 +437,17 @@ export default {
       document.addEventListener("touchmove", this.moving);
       document.addEventListener("mouseup", this.moveEnd);
       document.addEventListener("touchend", this.moveEnd);
+    },
+
+    /**
+     * 解除事件
+     */
+    removeListener () {
+      console.log('%c 🍫 removeEventListener', 'font-size:20px;background-color: #FCA650;color:#fff;');
+      document.removeEventListener("mousemove", this.moving);
+      document.removeEventListener("touchmove", this.moving);
+      document.removeEventListener("mouseup", this.moveEnd);
+      document.removeEventListener("touchend", this.moveEnd);
     }
   },
 };

@@ -89,7 +89,6 @@ export default {
 </script>
 <style lang="less" scoped>
 .container {
-  padding-top: 100px;
   position: relative;
   display: flex;
   flex-flow: row wrap;
@@ -115,11 +114,9 @@ export default {
     color: #606266;
     -webkit-appearance: none;
     text-align: center;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     outline: 0;
     margin: 0;
-    -webkit-transition: 0.1s;
     transition: 0.1s;
     font-weight: 500;
     padding: 12px 20px;

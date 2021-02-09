@@ -5,6 +5,7 @@
       <router-link to="verify2" class="button">verify2</router-link>
       <router-link to="verify3" class="button">verify3</router-link>
       <router-link to="login" class="button">login</router-link>
+      <router-link to="demo" class="button">demo</router-link>
     </div>
   </div>
 </template>

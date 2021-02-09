@@ -200,22 +200,23 @@ export default {
         ctx.font = fontSizeArr[tmp_index];
         ctx.fillStyle = _code_color2[color2Num];
 
+        let tmp_y;
         if (Math.floor(Math.random() * 2) == 1) {
-          var tmp_y = Math.floor(parseInt(this.setSize.imgHeight) / 2) + tmp_index * 20 + 20
+          tmp_y = Math.floor(parseInt(this.setSize.imgHeight) / 2) + tmp_index * 20 + 20
         } else {
-          var tmp_y = Math.floor(parseInt(this.setSize.imgHeight) / 2) - tmp_index * 20
+          tmp_y = Math.floor(parseInt(this.setSize.imgHeight) / 2) - tmp_index * 20
         }
 
         ctx.fillText(fontChars[i - 1], avg * i, tmp_y);
         this.fontPos[i - 1] = { 'char': fontChars[i - 1], 'x': avg * i, 'y': tmp_y }
       }
 
-      for (var i = 0; i < (this.defaultNum - this.checkNum); i++) {
+      for (let i = 0; i < (this.defaultNum - this.checkNum); i++) {
         this.shuffle(this.fontPos).pop();
       }
 
       var msgStr = '';
-      for (var i = 0; i < this.fontPos.length; i++) {
+      for (let i = 0; i < this.fontPos.length; i++) {
         msgStr += this.fontPos[i].char + ',';
       }
 
@@ -290,6 +291,7 @@ export default {
       // 加载完成开始绘制
       var _this = this
       img.onload = function (e) {
+        console.log(e);
         _this.$nextTick(() => {
           _this.fontPos = _this.drawImg(_this.$el, this)
         })
